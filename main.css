@@ -1,0 +1,8 @@
+#pic-template {
+    display: inline;
+    justify-content: center;
+}
+#image-1, #image-2, #image-3 {
+    height: 250px;
+    width: 250px;
+}
