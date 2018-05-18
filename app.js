@@ -9,13 +9,16 @@ class App {
         this.image = ProductImgs;
         this.numviewed = 0;
         this.numselected = 0;
+        this.totalClicks = 0;
     }
     render() {
         const dom = appTemplate.content;
         console.log(this.image);
 
         const addPicSection = dom.getElementById('display-img');
-        const addPicDisplay = new DisplayPic(this.image);
+        const addPicDisplay = new DisplayPic(this.image, (userChoice) => {
+            userChoice.numselected++;
+        });
 
         addPicSection.appendChild(addPicDisplay.render());
 
@@ -24,23 +27,6 @@ class App {
     
 }
 
-// class App {
 
-//     constructor(image, numviewed, numselected) {
-//         this.image = image;
-//         this.numviewed = 0;
-//         this.numselected) = 0;
-//     }
-//     render() {
-//         const dom = appTemplate.content;
-
-//         const addPicSection = dom.getElementById('display-img');
-//         const addPicDisplay = new PicTemplate();
-//         addPicSection.appendChild(addPicDisplay.render());
-
-//         return dom;
-//     }
-    
-// }
 
 
