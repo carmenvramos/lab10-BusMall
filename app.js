@@ -1,4 +1,4 @@
-/* globals PicTemplate */
+/* globals PicTemplate DisplayPic getRandomThree */
 /* exported ProductPic   */
 
 const appTemplate = document.getElementById('app-template');
@@ -6,18 +6,23 @@ const appTemplate = document.getElementById('app-template');
 class App {
 
     constructor() {
-        this.image = ProductImgs;
-        this.numviewed = 0;
-        this.numselected = 0;
         this.totalClicks = 0;
     }
+    
     render() {
         const dom = appTemplate.content;
-        console.log(this.image);
 
         const addPicSection = dom.getElementById('display-img');
-        const addPicDisplay = new DisplayPic(this.image, (userChoice) => {
-            userChoice.numselected++;
+        const addPicDisplay = new DisplayPic(getRandomThree(), (userChoice) => {
+            if(this.totalClicks < 5) {
+                userChoice.numselected++;
+                console.log(userChoice)
+                this.totalClicks++;
+                addPicDisplay.update(getRandomThree());
+            }
+            else {
+                alert('total clicks = ' + this.totalClicks);
+            }
         });
 
         addPicSection.appendChild(addPicDisplay.render());
