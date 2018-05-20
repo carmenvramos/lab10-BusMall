@@ -1,37 +1,39 @@
-/* globals ProductImgs ProductPic */
+/* globals ProductImgs ProductPic  IndexNum */
 /* exported PicTemplate */
 
 class ProductPic {
 
-    constructor(image, numviewed, numselected) {
+    constructor(name, image) {
+        this.name = name;
         this.image = image;
-        this.numviewed = 0;
-        this.numselected = 0;
+        this.numViewed = 0;
+        this.numSelected = 0;
     }
 }
 
-let product1 = new ProductPic('./images/bag.jpg', 0, 0);
-let product2 = new ProductPic('./images/banana.jpg', 0, 0);
-let product3 = new ProductPic('./images/bathroom.jpg', 0, 0);
-let product4 = new ProductPic('./images/boots.jpg', 0, 0);
-let product5 = new ProductPic('./images/breakfast.jpg', 0, 0);
-let product6 = new ProductPic('./images/bubblegum.jpg', 0, 0);
-let product7 = new ProductPic('./images/chair.jpg', 0, 0);
-let product8 = new ProductPic('./images/cthulhu.jpg', 0, 0);
-let product9 = new ProductPic('./images/dog-duck.jpg', 0, 0);
-let product10 = new ProductPic('./images/dragon.jpg', 0, 0);
-let product11 = new ProductPic('./images/pen.jpg', 0, 0);
-let product12 = new ProductPic('./images/pet-sweep.jpg', 0, 0);
-let product13 = new ProductPic('./images/scissors.jpg', 0, 0);
-let product14 = new ProductPic('./images/shark.jpg', 0, 0);
-let product15 = new ProductPic('./images/sweep.png', 0, 0);
-let product16 = new ProductPic('./images/tauntaun.jpg', 0, 0);
-let product17 = new ProductPic('./images/unicorn.jpg', 0, 0);
-let product18 = new ProductPic('./images/usb.gif', 0, 0);
-let product19 = new ProductPic('./images/water-can.jpg', 0, 0);
-let product20 = new ProductPic('./images/wine-glass.jpg', 0, 0);
+let product1 = new ProductPic('bag', './images/bag.jpg');
+let product2 = new ProductPic('banana', './images/banana.jpg');
+let product3 = new ProductPic('bathroom', './images/bathroom.jpg');
+let product4 = new ProductPic('boots', './images/boots.jpg');
+let product5 = new ProductPic('breakfast', './images/breakfast.jpg');
+let product6 = new ProductPic('bubblegum', './images/bubblegum.jpg');
+let product7 = new ProductPic('chair', './images/chair.jpg');
+let product8 = new ProductPic('cthulhu', './images/cthulhu.jpg');
+let product9 = new ProductPic('dog-duck', './images/dog-duck.jpg');
+let product10 = new ProductPic('dragon', './images/dragon.jpg');
+let product11 = new ProductPic('pen', './images/pen.jpg');
+let product12 = new ProductPic('pet-sweep', './images/pet-sweep.jpg');
+let product13 = new ProductPic('scissors', './images/scissors.jpg');
+let product14 = new ProductPic('shark', './images/shark.jpg');
+let product15 = new ProductPic('sweep', './images/sweep.png');
+let product16 = new ProductPic('tauntaun', './images/tauntaun.jpg');
+let product17 = new ProductPic('unicorn', './images/unicorn.jpg');
+let product18 = new ProductPic('usb', './images/usb.gif');
+let product19 = new ProductPic('water-can', './images/water-can.jpg');
+let product20 = new ProductPic('wine-glass', './images/wine-glass.jpg');
 
-var ProductImgs = [product1,
+var ProductImgs = [
+    product1,
     product2,
     product3,
     product4,
@@ -53,4 +55,6 @@ var ProductImgs = [product1,
     product20
 ];
 
+var IndexNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19];
 

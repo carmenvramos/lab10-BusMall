@@ -11,7 +11,7 @@
     <div id="root"></div>
 
     <template id="app-template">
-        <h1>BusMall Catalog of Products</h1>
+        <h1>BusMall Products Survey</h1>
         <section id="display-img" > </section>
         <section id="display-rpt" > </section>
     </template>
@@ -32,17 +32,29 @@
         <table class="hidden">
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>#Times Viewed</th>
-                    <th>#Times Selected</th>
+                    <th>Product Name</th>
+                    <th># Times Viewed</th>
+                    <th># Times Selected</th>
+                    <th>Percent Selected</th>
                 </tr>
             </thead>
+            <tbody></tbody>
         </table>
     </template>
+
+    <template id="survey-report-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
     
+    <script src="StatsReport.js"></script> 
     <script src="images.js"></script>
-    <script src="random.js"></script>
-    <script src="DisplayPic.js"></script> 
+    <script src="functions.js"></script>
+    <script src="DisplayPic.js"></script>
     <script src="app.js"></script> 
    <script src="main.js"></script>
 </body>

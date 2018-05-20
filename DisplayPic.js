@@ -13,14 +13,18 @@ class DisplayPic {
     update(images) {
         this.images = images;
         for(var i = 0; i < this.images.length; i++) {
+            // console.log('loop update(images)');
+            // console.log('i = ', i);
             const img = this.container.querySelector('#image-' + (i + 1));
+            // console.log(img);
             img.src = this.images[i].image;
-            this.images[i].numviewed++;      
+            this.images[i].numViewed++;      
         }
     }
 
     render() {
         const dom = picTemplate.content.cloneNode(true);
+        console.log(dom);
         this.container = dom.querySelector('div');
 
         for(let i = 0; i < this.images.length; i++) {
