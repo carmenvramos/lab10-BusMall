@@ -27,7 +27,7 @@ class App {
         const addPicSection = dom.getElementById('display-img');
         const addPicDisplay = new DisplayPic(getRandomThree(), (userChoice) => {
             this.totalClicks++;
-            if(this.totalClicks < 5) {
+            if(this.totalClicks < 25) {
                 userChoice.numSelected++;
                 console.log('user Choice', userChoice);
                 addPicDisplay.update(getRandomThree());
