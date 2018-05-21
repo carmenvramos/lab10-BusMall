@@ -44,7 +44,10 @@ class App {
         addPicSection.appendChild(addPicDisplay.render());
 
         this.reportSection = dom.getElementById('display-rpt');
-        // this.showReport();
+        if (window.location.pathname.indexOf('report.html') !== -1) {
+            this.showReport();
+        }
+         
 
         return dom;
     }
