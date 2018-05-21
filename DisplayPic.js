@@ -1,4 +1,4 @@
-/* globals ProductImgs */
+/* globals productImgs */
 /* exported DisplayPic */
 
 const picTemplate = document.getElementById('pic-template');
@@ -24,7 +24,6 @@ class DisplayPic {
 
     render() {
         const dom = picTemplate.content.cloneNode(true);
-        console.log(dom);
         this.container = dom.querySelector('div');
 
         for(let i = 0; i < this.images.length; i++) {

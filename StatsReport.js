@@ -11,11 +11,10 @@ class StatsReport {
     
     update(images) {
         this.images = images;
-        // console.log('this.images', this.images);
         while(this.tableBody.lastElementChild) {
             this.tableBody.lastElementChild.remove();
         }
-        
+
         for(let i = 0; i < this.images.length; i++) {
             const reportComponent = new SurveyReport(this.images[i]);
             this.tableBody.appendChild(reportComponent.render());
@@ -23,10 +22,10 @@ class StatsReport {
     }
 
     render() {
-        const dom = statsReportTemplate;
 
+        const dom = statsReportTemplate.content;
+        console.log(dom);
         this.tableBody = dom.querySelector('tbody');
-
         for(let i = 0; i < this.images.length; i++) {
             const reportComponent = new SurveyReport(this.images[i]);
             this.tableBody.appendChild(reportComponent.render());

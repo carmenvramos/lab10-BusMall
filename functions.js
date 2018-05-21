@@ -1,11 +1,10 @@
-/* globals ProductImgs */
+/* globals productImgs */
 /* exported getRandomThree */
 
 
 function getRandomThree() {
-    let copyArray = ProductImgs;
-    let copyIndex = IndexNum.slice();
-    // console.log('index array', copyIndex);
+    let copyArray = productImgs;
+    let copyIndex = indexNums.slice();
     var product1 = getProduct(copyArray, copyIndex);
     var product2 = getProduct(copyArray, copyIndex);
     var product3 = getProduct(copyArray, copyIndex);
@@ -15,20 +14,16 @@ function getRandomThree() {
 
     function getProduct(array, index) {
         var indexLength = index.length;
-        var num1 = index[0];
-        var num2 = index[indexLength - 1];
+        var firstNum = index[0];
+        var lastNum = index[indexLength - 1];
         
 
-        // console.log('num1 num2 ', num1, num2);
-        var random = getRandomIntInclusive(num1, num2);
+        var random = getRandomIntInclusive(firstNum, lastNum);
         while(!index.includes(random)){
-            random = getRandomIntInclusive(num1, num2);
+            random = getRandomIntInclusive(firstNum, lastNum);
         }
-        // console.log('random num ', random);
         var product = array[random];
         index.splice(index.indexOf(random), 1);
-        // console.log('new index ', index);
-        // console.log('product ', product);
         return product;
         
     }

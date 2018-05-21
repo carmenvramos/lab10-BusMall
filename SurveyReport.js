@@ -14,7 +14,11 @@ class SurveyReport {
         columns[0].textContent = this.image.name;
         columns[1].textContent = this.image.numViewed;
         columns[2].textContent = this.image.numSelected;
-        columns[3].textContent = this.image.numSelected / this.image.numViewed * 100;
+        if(this.image.numViewed) {
+            columns[3].textContent = this.image.numSelected / this.image.numViewed * 100 + ' %';
+        } else {
+            columns[3].textContent = '0 %';
+        }
         
         return dom;
 

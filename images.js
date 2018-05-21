@@ -1,4 +1,4 @@
-/* globals ProductImgs ProductPic  IndexNum */
+/* globals productImgs ProductPic  indexNums */
 /* exported PicTemplate */
 
 class ProductPic {
@@ -32,7 +32,7 @@ let product18 = new ProductPic('usb', './images/usb.gif');
 let product19 = new ProductPic('water-can', './images/water-can.jpg');
 let product20 = new ProductPic('wine-glass', './images/wine-glass.jpg');
 
-var ProductImgs = [
+var productImgs = [
     product1,
     product2,
     product3,
@@ -55,6 +55,7 @@ var ProductImgs = [
     product20
 ];
 
-var IndexNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    11, 12, 13, 14, 15, 16, 17, 18, 19];
-
+var indexNums = [];
+for(let i = 0; i < productImgs.length; i++) {
+    indexNums.push(i);
+}

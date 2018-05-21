@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div id="root"></div>
 
     <template id="app-template">
-        <h1>BusMall Products Survey</h1>
-        <section id="display-img" > </section>
-        <section id="display-rpt" > </section>
+        <header>
+            <h1>BusMall Products Survey</h1>
+        </header>
+        <main>
+            <section id="display-img"></section>
+            <section id="display-rpt"></section>
+        </main>
     </template>
- 
 
     <template id="pic-template">
         <div>
-        <img id="image-1">
-        <img id="image-2">
-        <img id="image-3">
+            <img id="image-1">
+            <img id="image-2">
+            <img id="image-3">
         </div>
 
         <h3>Click image to select</h3>
@@ -44,18 +48,19 @@
 
     <template id="survey-report-template">
         <tr>
+            <td class="product-name"></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td class="percent"></td>
         </tr>
     </template>
     
+    <script src="SurveyReport.js"></script> 
     <script src="StatsReport.js"></script> 
     <script src="images.js"></script>
     <script src="functions.js"></script>
     <script src="DisplayPic.js"></script>
     <script src="app.js"></script> 
-   <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
